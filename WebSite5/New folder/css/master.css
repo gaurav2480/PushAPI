@@ -1,0 +1,15 @@
+ .bell {       
+       transition: all .3s cubic-bezier(.25,.8,.25,1);
+           -webkit-animation: beamer_pop-in .5s;
+}
+
+        .bell:before {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAYAAACWwljjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAkdJREFUeNrUWN1xgkAQBsZ3KQErCFYQqCBaQbQCw6svDi++GiuADrSDYAWaCjQd0EGyl1mTzXon3HGg2ZkbTuD2vvv2h11dp4Esl0sfLhmMEd4q5vN53ESn5zSTCQEjJAKQL7cE9Ci5598S0LvkXr+JQtfAbwK4LNBUKjZKGFsYKfjUqRVA6MAr9BsdyWEkAKy0BgjAhHDZwAjYowLGTuJXkYSxGEAdGgNCMG/EPEL5Gsar6tTIpoi2GVtXCcqt4S97olQoG9f1C1wvmA0JqOG19VVRljEwsY6T4rsxrj2nhMyIIThdhKY6n2xQ1zEVJjySw4mDFboMLcg8MQWDTIm1iUJ3NUNo+yP+PIHCgWNBQO+RROpAZn4VQyGZbx17slXsoQVoZxHQzhQQT2q2pFKXV+MrfrAIiPrMgxFDTaJLkZeulimec2fybwAFHewdmAAqWgBSaAHCb1gbIX+hE0ubSobaSooynVEdQM8SetswGd/rEhCaKyQf1YNtNKjznI9C5iIXDK3IPG0xwlLFnr/lByDNSEdhreSoWYrksN/0hyF4yNubaQd5iO4xQUIcl5Wq3y8C2ryLrAx7T1iNHXss9JKuwKCD58yfIu9KedCV/InkHsvGGdD4BNePjsD02d85ZQ977xl6vG/Qu9ss3nIPC7BxS1lZJ3uLjrh0DaPjk9g/kSTXEJ1WW79pgVaSD7EvulDsRH3Wx2tLzxDQmnSfG2CsQAAj9o62uKZGBxB7VW8lTAmMDTutqXHDlJlGzFNTMEK+BBgAZlTLw68SOp0AAAAASUVORK5CYII=);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 34px;
+    width: 20px
+}

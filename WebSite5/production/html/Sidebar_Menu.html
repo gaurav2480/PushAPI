@@ -1,0 +1,46 @@
+﻿<div class="col-md-3 col-sm-3 col-xs-12 col-lg-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border-bottom: 2px; height:auto; color: #172D44;" id="img">
+
+            <img src="../production/images/KSC1.png" class="img-square" alt="" style="margin-top:3px; margin-bottom:5px;" width="200" height="53" /><br />
+
+            <!-- <span style="opacity: 0.5; font-size:16px; margin-bottom:150px; font-style:oblique; font-family:'Bookman Old Style'; color:#FCDE97">Karma Group</span>-->
+        </div>
+
+        <div class="clearfix"></div>
+
+        <br />
+        <br />
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+
+                <h3>MENU</h3>
+                <ul class="nav side-menu">
+                    <% Response.Write(getdata()); %>
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- /sidebar menu -->
+        <!-- /menu footer buttons -->
+
+        <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Home" href="Dashboard.aspx">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Settings" href="SettingSystem.aspx">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Refresh" href="" onClick="window.location.reload();">
+                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </a>
+
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="logout.aspx">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- /menu footer buttons -->
+    </div>
+</div>
