@@ -84,6 +84,17 @@ public class API
     }
 
 
+    public static SqlDataReader getAllVpMemberNumbersOdyssey()
+    {
+        SqlDataReader dr;
+        SqlConnection cs1 = API.GetDBConnection();
+        SqlCommand SqlCmd = new SqlCommand("select distinct top(50) VpMemberNo,contractNo,ID from Odyssey_MemberData where pStatus='Active' and PushStatus='Pending' order by ID asc;", cs1);
+        //SqlCmd.Parameters.Add("@venue", SqlDbType.VarChar).Value = venue;
+        dr = SqlCmd.ExecuteReader(CommandBehavior.CloseConnection);
+        return dr;
+    }
+
+
     public static int InsertFailedDetails(string contractid,string sourfilename,string description,string documentDate,string documentFileType,string documentSourceType,string documentType,string base64data,string errorMessage)
     {
         int rowsAffected = 0;
