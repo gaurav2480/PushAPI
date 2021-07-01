@@ -76,7 +76,7 @@ public partial class WebSite5_production_Odyssey_Data_Push : System.Web.UI.Page
                             string query = "update [Odyssey_MemberData] set ContractID='" + contractID + "' where contractNo='" + vpcontractNo + "' and VpMemberNo='" + memberNo + "' ;";
                             SqlCommand cmd = new SqlCommand(query, sqlcon);
                             cmd.ExecuteNonQuery();
-                            string[] files = Directory.GetFiles(@"\\192.168.10.40\D$\new\code\Odyssey", "*" + fileNameArray[j] + "*", SearchOption.AllDirectories);
+                            string[] files = Directory.GetFiles(@"\\192.168.10.40\D$\new\code\Odyssey\2", "*" + fileNameArray[j] + "*", SearchOption.AllDirectories);
 
                             foreach (string file in files)
                             {
@@ -89,7 +89,7 @@ public partial class WebSite5_production_Odyssey_Data_Push : System.Web.UI.Page
                                 postwebReq.Method = "POST";
                                 postwebReq.ContentType = "application/json";
                                 //        string postData = "{\"Description\":\"" + fileNameArray[j] + "\",\"DocumentType\":\"" + "95233" + "\",\"DocumentFileType\":\"" + "10040" + "\",\"DocumentSourceType\":\"" + "95234" + "\",\"DocumentDate\":\"" + "2020-11-17" + "\",\"SourceFileName\":\"" + fileNameArray[j]+".pdf" + "\",\"Base64Data\":\"" + filess + "\"}";
-                                string postData = "{\"LogType\":\"" + "COMMUNICATION" + "\",\"UserLogType\":\"" + "10136" + "\",\"LogStatus\":\"" + "CLOSED" + "\",\"LogComment\":\"" + "" + "\",\"Subject\":\"" + "Membership cards out" + "\",\"LogSourceID\":\"" + "94783" + "\",\"AssignedToUser\":\"" + "" + "\",\"UserDate\":\"" + "" + "\",\"DueDate\":\"" + "" + "\",\"Attachment\":{\"Description\":\"" + "Membership cards out" + "\",\"DocumentType\":\"" + "10130" + "\",\"DocumentFileType\":\"" + "10040" + "\",\"DocumentSourceType\":\"" + "10104" + "\",\"DocumentDate\":\"" + "2021-03-29" + "\",\"SourceFileName\":\"" + "merge_15_" + memberNo+ ".pdf"+ "\",\"Base64Data\":\"" + filess + "\"}}";
+                                string postData = "{\"LogType\":\"" + "COMMUNICATION" + "\",\"UserLogType\":\"" + "10136" + "\",\"LogStatus\":\"" + "CLOSED" + "\",\"LogComment\":\"" + "" + "\",\"Subject\":\"" + "Membership cards out" + "\",\"LogSourceID\":\"" + "94783" + "\",\"AssignedToUser\":\"" + "" + "\",\"UserDate\":\"" + "" + "\",\"DueDate\":\"" + "" + "\",\"Attachment\":{\"Description\":\"" + "Membership cards out" + "\",\"DocumentType\":\"" + "10130" + "\",\"DocumentFileType\":\"" + "10040" + "\",\"DocumentSourceType\":\"" + "10104" + "\",\"DocumentDate\":\"" + "2021-04-15" + "\",\"SourceFileName\":\"" + "merge_15_" + memberNo+ ".pdf"+ "\",\"Base64Data\":\"" + filess + "\"}}";
                                 using (var streamWriter = new StreamWriter(postwebReq.GetRequestStream()))
                                 {
                                     streamWriter.Write(postData);
